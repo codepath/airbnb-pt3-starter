@@ -27,7 +27,7 @@ describe("GET /bookings/", () => {
     const { bookings } = res.body
     expect(bookings.length).toEqual(2)
 
-    const firstBooking = bookings[0]
+    const firstBooking = bookings[bookings.length - 1]
 
     firstBooking.totalCost = Number(firstBooking.totalCost)
 
@@ -100,7 +100,7 @@ describe("GET /bookings/listings/:listingId", () => {
     const { bookings } = res.body
     expect(bookings.length).toEqual(2)
 
-    const firstBooking = bookings[0]
+    const firstBooking = bookings[bookings.length - 1]
 
     firstBooking.totalCost = Number(firstBooking.totalCost)
 
